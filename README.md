@@ -21,4 +21,4 @@ Run the main script with:
 ```
 # Enterprise AI Platform
 
-Learning Python, FastAPI, AI, and Enterprise Software Development
+Learning Python, FastAPI, AI, and Enterprise Software Developmentgit status.
