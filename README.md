@@ -19,3 +19,6 @@ Run the main script with:
 ```powershell
 .venv\Scripts\python.exe main.py
 ```
+# Enterprise AI Platform
+
+Learning Python, FastAPI, AI, and Enterprise Software Development.
