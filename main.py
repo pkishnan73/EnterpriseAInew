@@ -1,18 +1,15 @@
-from app.welcome import display_message
-from models.user import User
-
+from database.user_repository import insert_user
 
 def main():
-    display_message()
 
-    user1 = User(
-        1,
-        "Rajesh Krishnan",
-        "pkrishnan73@gmail.com"
+    insert_user(
+        "Anita",
+        "anita@gmail.com",
+        "Manager"
     )
 
-    user1.display()
-
+    print("User Inserted")
 
 if __name__ == "__main__":
+
     main()
