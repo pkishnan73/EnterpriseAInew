@@ -1,14 +1,14 @@
-from database.user_repository import insert_user
+from database.user_repository import get_users
+
 
 def main():
 
-    insert_user(
-        "Anita",
-        "anita@gmail.com",
-        "Manager"
-    )
+    users = get_users()
 
-    print("User Inserted")
+    for user in users:
+
+        print(user)
+
 
 if __name__ == "__main__":
 

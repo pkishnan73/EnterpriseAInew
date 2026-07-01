@@ -1,15 +1,21 @@
-class User:
+from sqlalchemy import Integer, String
+from sqlalchemy.orm import Mapped, mapped_column
 
-    def __init__(self, user_id, name, email):
+from database.base import Base
 
-        self.user_id = user_id
-        self.name = name
-        self.email = email
 
-    def display(self):
+class User(Base):
 
-        print("=" * 40)
-        print(f"ID    : {self.user_id}")
-        print(f"Name  : {self.name}")
-        print(f"Email : {self.email}")
-        print("=" * 40)
+    __tablename__ = "users"
+
+    user_id: Mapped[int] = mapped_column(
+        Integer,
+        primary_key=True,
+        autoincrement=True
+    )
+
+    name: Mapped[str] = mapped_column(String(100))
+
+    email: Mapped[str] = mapped_column(String(100))
+
+    role: Mapped[str] = mapped_column(String(50))
